@@ -10,7 +10,7 @@ Written in clean architecture (single module)
 
 Application structure is Single activity
 
-##Project Structure
+## Project Structure
 
 The packages: 
     application - as name suggest is application classes
@@ -20,6 +20,6 @@ The packages:
         features.shared - the shared code between features
     main - the activity class
 
-##Usage
+## Usage
 
 Add 'api_key' variable in local.properties file with value of apiKey from thecatapi.com 
