@@ -7,7 +7,6 @@ import dagger.Component
 
 @Component(
     modules = [
-        CatDataModule::class,
         CatListModule::class
     ],
     dependencies = [

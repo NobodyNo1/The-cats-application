@@ -1,4 +1,4 @@
-package com.bekarys.tech_assignment.thecats.di.catlist
+package com.bekarys.tech_assignment.thecats.di.shared.catlist
 
 import com.bekarys.tech_assignment.thecats.di.scopes.FragmentScope
 import com.bekarys.tech_assignment.thecats.features.breedlist.data.CatLocalDataSource
@@ -15,11 +15,12 @@ import com.bekarys.tech_assignment.thecats.features.common.threading.AppSchedule
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
+import javax.inject.Singleton
 
 @Module
 class CatDataModule {
 
-    @FragmentScope
+    @Singleton
     @Provides
     fun provideCatsRepository(
         okHttpClient: OkHttpClient,
@@ -37,7 +38,7 @@ class CatDataModule {
             downloadManagerController
         )
 
-    @FragmentScope
+    @Singleton
     @Provides
     fun provideCatsInteractor(
         catRepository: CatRepository

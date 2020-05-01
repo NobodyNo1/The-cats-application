@@ -3,6 +3,9 @@ package com.bekarys.tech_assignment.thecats.di.app
 import android.content.Context
 import com.google.gson.Gson
 import com.bekarys.tech_assignment.thecats.application.TestApplication
+import com.bekarys.tech_assignment.thecats.di.shared.catlist.CatDataModule
+import com.bekarys.tech_assignment.thecats.features.breedlist.domain.CatInteractor
+import com.bekarys.tech_assignment.thecats.features.breedlist.domain.CatRepository
 import com.bekarys.tech_assignment.thecats.features.common.api.cat.CatService
 import com.bekarys.tech_assignment.thecats.features.common.database.AppDatabase
 import com.bekarys.tech_assignment.thecats.features.common.downloadmanager.DownloadManagerController
@@ -19,7 +22,7 @@ import javax.inject.Singleton
 
 @Component(
     modules = [
-        AppModule::class
+        AppModule::class, CatDataModule::class
     ]
 )
 @Singleton
@@ -50,4 +53,8 @@ interface AppComponent {
     fun permissionHelper(): PermissionHelper
 
     fun downloadManagerController(): DownloadManagerController
+
+    fun catRepository(): CatRepository
+
+    fun catInteractor(): CatInteractor
 }
