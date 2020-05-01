@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TheCats</string>
+    <string name="cats_tab">Cats</string>
+    <string name="favorites_tab">Favorites</string>
+</resources>
